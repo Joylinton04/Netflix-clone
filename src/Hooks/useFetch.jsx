@@ -54,9 +54,6 @@ const useFetch = (url) => {
               }
         }
         fetchData(url)
-        /* setTimeout(() => {
-          fetchData(url)
-        },3000) */
     },[])
 
     return { data, fetchError, isLoading};
