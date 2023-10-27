@@ -646,4 +646,24 @@ nav .search-movie input:focus {
   .dmovies-info .mov-cd a {
     width: 150px;
   }
+
+  .trending-movie-img-card .movie-info {
+    left: 5%;
+    top: 25%;
+  }
+
+  .movie-info button {
+    width: 90px;
+    height: 40px;
+    font-size: 14px;
+    box-shadow: 0px 0px 4px 4px #ff0000;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  nav .search-movie  {
+    display: none;
+  }
 }
