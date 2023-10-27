@@ -7,7 +7,6 @@ import useFetch from "../Hooks/useFetch";
 const ImageSlider = () => {
 
     const { data: dataAll, fetchError: fetchErrorAll, isLoading: isLoadingAll } = useFetch('https://api.themoviedb.org/3/trending/all/day');
-    console.log(dataAll[0])
 
   return (
     <div className="img-slider"> 

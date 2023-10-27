@@ -9,7 +9,7 @@ const MovieInfo = () => {
     const { id } = useParams();
     const { data, fetchError, isLoading } = useFetch(`https://api.themoviedb.org/3/movie/${id}`);
     
-  
+
     
 
   return (

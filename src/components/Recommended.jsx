@@ -6,7 +6,6 @@ import SkeletonLoading from "./SkeletonLoading";
 
 const Recommended = ({id}) => {
     const { data, fetchError, isLoading } = useFetch(`https://api.themoviedb.org/3/movie/${id}/recommendations`);
-    //https://api.themoviedb.org/3/movie/575264/recommendations
 
   return (
     <div className="recommended">
