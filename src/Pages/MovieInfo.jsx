@@ -2,8 +2,8 @@ import { useParams } from "react-router-dom";
 import StarIcon from "@mui/icons-material/Star"
 import SkeletonLoading from "../components/SkeletonLoading";
 import useFetch from "../Hooks/useFetch";
-import MovieDetails from "../components/MovieDetails";
 import Recommended from "../components/Recommended";
+import err404 from "../assets/nomovie404.png"
 
 const MovieInfo = () => {
     const { id } = useParams();
@@ -14,7 +14,27 @@ const MovieInfo = () => {
 
   return (
     <div className="moviepage">
-        {data ? 
+        {isLoading && 
+            <>
+                <div className="smovie">
+                    <div className="smovie-img">
+                    </div>
+                    <div className="smovie-info">
+                        <div className="smovies-poster">
+                        </div>
+                        <div className="smovies-details">
+                        </div>
+                    </div>
+                </div>
+            </>
+            }
+        {fetchError && (
+            <>
+                <div className="smovie-img err">
+                    <img src={err404} alt="" />
+                </div>
+            </>)}
+        {!fetchError && !isLoading && (data ? 
             <div className="smovie">
                 <div className="smovie-img">
                     <img src={`https://image.tmdb.org/t/p/original${data.backdrop_path}`} alt="" />
@@ -40,7 +60,7 @@ const MovieInfo = () => {
                 marginTop: "50vh"
             }}>Could not find movie
             </p>
-        }
+        )}
     </div>
   )
 }

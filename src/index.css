@@ -124,8 +124,18 @@ nav .search-movie input:focus {
   height: 100%;
   width: 100vw;
   border: 1px solid #000;
-  background-color: #000;
+  animation: skeleton-loading-img 1.5s linear infinite alternate;
   /* position: absolute; */
+}
+
+@keyframes skeleton-loading-img {
+  0% {
+    background-color: hsl(180, 1%, 26%);
+  }
+
+  100% {
+    background-color: hsl(0, 0%, 15%);
+  }
 }
 
 .trending-movie-img-card img {
@@ -279,6 +289,7 @@ nav .search-movie input:focus {
   width: 100%;
   height: 200px;
   border-radius: inherit;
+  animation: skeleton-loading 1.5s linear infinite alternate;
 }
 
 .dmovies-info .mov-cd a .movies-img img {
@@ -372,6 +383,8 @@ nav .search-movie input:focus {
 
 .moviepage .smovie .smovie-img{
   height: 80vh;
+  width: 100vw;
+  animation: skeleton-loading-img 1.5s linear infinite alternate;
 }
 
 .smovie-img img {
@@ -395,6 +408,7 @@ nav .search-movie input:focus {
   width: 350px;
   height: 450px;
   border-radius: 0.5rem;
+  animation: skeleton-loading-img 1.5s linear infinite alternate;
 }
 
 .smovies-poster img {
@@ -535,6 +549,10 @@ nav .search-movie input:focus {
     width: 20%;
     min-width: max-content;
   }
+
+  .err {
+    height: 90vh;
+  }
 }
 
 @media (max-width: 648px) {
@@ -613,6 +631,10 @@ nav .search-movie input:focus {
 
   .recommended {
     padding: 1rem;
+  }
+
+  .err {
+    height: 95vh;
   }
 }
 
