@@ -19,7 +19,7 @@ const useFetch = (url) => {
                 },
                 headers: {
                   accept: 'application/json',
-                  Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjNTgzYzk4MjNiYjA1NmVmNDNhM2RkODQ3ZTA2NjcyNCIsInN1YiI6IjY0NTk0NGRlNzdkMjNiMDE3MDM3ODAzOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.v34qxBr3zKIbSsYMtVnJUmyLE9vgjaFwsExBFu-ytcg'
+                  Authorization: import.meta.env.VITE_ACCESS_TOKEN
                 }
               };
 
@@ -42,21 +42,21 @@ const useFetch = (url) => {
             setIsloading(true)
               try{
                 const {data} = await axios.get(dataurl, options)
-                setData(data.results)
+                setData(data.results || data)
                 setFetchError(null)
-                //console.log(data.results)
+                //console.log(data.results || data);
               } catch(err) {
                 console.log(err)
-                //setData([])
+                setData([])
                 setFetchError(err.message)
               } finally {
                 setIsloading(false)
               }
         }
-
-        setTimeout(() => {
+        fetchData(url)
+        /* setTimeout(() => {
           fetchData(url)
-        },3000)
+        },3000) */
     },[])
 
     return { data, fetchError, isLoading};

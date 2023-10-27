@@ -17,12 +17,12 @@ useEffect(() => {
 }, []);
 
 return (
-  <nav style={scrollY < 200 ? {} : { backgroundColor: "#000" }}>
+  <nav style={scrollY < 300 ? {} : { backgroundColor: "#000" }}>
         <h1>Netflix</h1>
         <ul>
             <li><Link to='/'>Home</Link></li>
             <li><a href="#All-movies">Movies</a></li>
-            <li><a>TV show</a></li>
+            <li><a href="#TV-show">TV show</a></li>
         </ul>
         <div className="search-movie">
           <input 

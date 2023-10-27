@@ -13,10 +13,7 @@ const LatestMovies = ({ latest }) => {
                     <img src={""} alt="" />
                 </div>
                 <div className="movie-details">
-                    <h2>{movie.original_name.length <= 10 
-                        ? movie.original_name
-                        : movie.original_name.slice(0, 10) + "..."
-                    }</h2>
+                    <h2>{movie.original_name}</h2>
                     <span>{movie.first_air_date}</span>
                     <span><StarIcon className="star"/>5.9</span>
                 </div>

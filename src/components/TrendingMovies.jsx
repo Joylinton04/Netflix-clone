@@ -2,26 +2,26 @@ import { Link } from "react-router-dom";
 import StarIcon from '@mui/icons-material/Star';
 import mario from "../assets/Super-mario-movie.webp"
 
-const TrendingMovies = ({movies}) => {
+const TrendingMovies = ({movies, title}) => {
  
   return (
     <div className="trending-movies">
-        <h1>Trending movies</h1>
+        <h1>{title}</h1>
         <div className="dmovies-info">
             {movies.map((movie) => (
             <div className="mov-cd" key={movie.id}>
                 <Link to={`/movie/${movie.id}`}>
                 <div className="movies-img">
-                    <img src={mario} alt="" />
+                    <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt="" />
                 </div>
                 <div className="movie-details">
-                    <h2>{(movie.original_title).length <= 10 
-                        ? movie.original_title
-                        : movie.original_title.slice(0, 10) + "..."
-                    }</h2>
+                <h2>{movie.original_title}</h2>
                     <div className="date">
-                        <span>{movie.release_date}</span>
-                        <span><StarIcon className="star"/>{movie.vote_average}</span>
+                        <p>{movie.release_date}</p>
+                        <p>
+                            <StarIcon className="star"/>
+                            <span>{(movie.vote_average).toFixed(2)}</span>
+                        </p>
                     </div>
                 </div>
                 </Link>

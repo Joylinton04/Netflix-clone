@@ -1,18 +1,12 @@
 import ImageSlider from "../components/ImageSlider";
 import HomeContent from "../layout/HomeContent";
 
-const HomePage = ({movies, latest, tvShow, fetchError, isLoading}) => {
+const HomePage = () => {
 
   return (
     <div className="homePage">
-        <ImageSlider movies={movies}/>   
-        <HomeContent 
-          movies={movies} 
-          latest={latest} 
-          tvShow={tvShow}
-          fetchError={fetchError}
-          isLoading={isLoading}
-          />
+        <ImageSlider/>   
+        <HomeContent />
     </div>
   )
 }
