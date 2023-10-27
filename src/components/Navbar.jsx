@@ -22,7 +22,7 @@ return (
         <ul>
             <li><Link to='/'>Home</Link></li>
             <li><a href="#All-movies">Movies</a></li>
-            <li><a href="#TV-show">TV show</a></li>
+            <li><a href="#">Discover</a></li>
         </ul>
         <div className="search-movie">
           <input 

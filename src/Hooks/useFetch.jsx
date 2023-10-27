@@ -23,28 +23,12 @@ const useFetch = (url) => {
                 }
               };
 
-              /* axios
-                  .request(options)
-                  .then(function (response) {
-                    setIsloading(true)
-                    console.log(response.data.results);
-                    setData(response.data.results);
-                    setFetchError(null)
-                  })
-                  .catch((error) => {
-                    console.error(error);
-                    setData([])
-                    setFetchError(error.message)
-                  }).finally(() => 
-                    setIsloading(false)
-                  ) */
         const fetchData = async (dataurl)=> {
             setIsloading(true)
               try{
                 const {data} = await axios.get(dataurl, options)
                 setData(data.results || data)
                 setFetchError(null)
-                //console.log(data.results || data);
               } catch(err) {
                 console.log(err)
                 setData([])

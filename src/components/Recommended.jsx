@@ -1,4 +1,4 @@
-import TrendingMovies from "./TrendingMovies";
+import TrendingMovies from "./MovieCard";
 import useFetch from "../Hooks/useFetch";
 import SkeletonLoading from "./SkeletonLoading";
 

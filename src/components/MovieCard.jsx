@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import StarIcon from '@mui/icons-material/Star';
 import mario from "../assets/Super-mario-movie.webp"
 
-const TrendingMovies = ({movies, title}) => {
+const MovieCard = ({movies, title}) => {
  
   return (
     <div className="trending-movies">
@@ -32,4 +32,4 @@ const TrendingMovies = ({movies, title}) => {
   )
 }
 
-export default TrendingMovies;
+export default MovieCard;
