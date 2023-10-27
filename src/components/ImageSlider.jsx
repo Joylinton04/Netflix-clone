@@ -30,7 +30,7 @@ const ImageSlider = () => {
                         <p>Release Date: {dataAll[0].release_date}</p>
                         <p><StarIcon/> {(dataAll[0].vote_average).toFixed(2)}</p>
                         <h1>{dataAll[0].original_title}</h1>
-                        <p>{dataAll[0].overview}</p>
+                        <p className='overview'>{dataAll[0].overview}</p>
                         <button><Link to={`/movie/${dataAll[0].id}`}>watch</Link></button>
                     </div>
                     </>    

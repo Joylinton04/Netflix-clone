@@ -649,7 +649,7 @@ nav .search-movie input:focus {
 
   .trending-movie-img-card .movie-info {
     left: 5%;
-    top: 25%;
+    top: 35%;
   }
 
   .movie-info button {
@@ -665,5 +665,14 @@ nav .search-movie input:focus {
 
   nav .search-movie  {
     display: none;
+  }
+
+  .movie-info h1 {
+    font-size: 22px;
+  }
+
+  .trending-movie-img-card .movie-info .overview {
+    font-size: 12px;
+    line-height: 1.7;
   }
 }
